@@ -1,0 +1,41 @@
+# License — Free Packs
+
+Copyright (c) 2026 the pack authors. All rights reserved.
+
+This license applies to the packs under `free/` in this repository:
+**SkyBlock Menus Lite** and **Starter Menus**.
+
+It does **not** apply to the premium packs described in `premium/`, which are sold
+separately and carry their own commercial license.
+
+---
+
+## You may
+
+- **Use** these configurations on any Minecraft server you own or operate, including
+  commercial servers with a store and paying players.
+- **Modify** them freely — change text, icons, slots, commands, layouts, anything.
+- **Share the link** to this repository with anyone, including in your own community.
+- **Use them as a starting point** for your own private menus.
+
+## You may not
+
+- **Sell** these files, or any modified version of them.
+- **Bundle** them into a paid product, a paid setup service, or a paid server template.
+- **Redistribute** them as your own work, or upload them to another marketplace.
+- **Remove or alter** this license file or the copyright notices.
+
+If you want to include these menus in something you sell, that's what the premium packs
+are for — they come with a commercial license.
+
+---
+
+## No warranty
+
+These configurations are provided **as is**, without warranty of any kind, express or
+implied. The authors are not liable for any damages arising from their use, including
+server downtime, data loss, or lost revenue.
+
+Minecraft, Paper, BentoBox, DeluxeMenus, PlaceholderAPI and all other plugins named in
+this repository are the property of their respective owners and remain under their own
+licenses. Nothing in this repository redistributes them.

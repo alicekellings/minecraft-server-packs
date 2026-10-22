@@ -1,0 +1,91 @@
+# Starter Menus (Free Edition) — Warp menu
+# Original configuration by the seller. Not derived from any default or shared config.
+# Open with: /warps
+# Requires: DeluxeMenus 1.14.x+ (EssentialsX only for the /warp command itself)
+
+menu_title: '&8» &d&lWarps'
+open_command: warps
+register_command: true
+size: 27
+update_interval: 10
+
+items:
+  'filler':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,10,12,15,17,18,19,20,22,24,25,26]
+    display_name: ' '
+
+  'spawn':
+    material: BEACON
+    slot: 11
+    display_name: '&e&lSPAWN'
+    lore:
+      - '&7Back to the server hub.'
+      - ''
+      - '&eClick to teleport'
+    left_click_commands:
+      - '[player] warp spawn'                        # EDIT: warp name in your warp plugin
+      - '[close]'
+
+  'pvp':
+    material: NETHERITE_SWORD
+    slot: 13
+    display_name: '&c&lPVP ARENA'
+    lore:
+      - '&7Fight other players.'
+      - '&7Keep inventory is off!'
+      - ''
+      - '&eClick to teleport'
+    left_click_commands:
+      - '[player] warp pvp'                          # EDIT
+      - '[close]'
+
+  'market':
+    material: EMERALD_BLOCK
+    slot: 14
+    display_name: '&a&lMARKET'
+    lore:
+      - '&7Player shops and trading.'
+      - ''
+      - '&eClick to teleport'
+    left_click_commands:
+      - '[player] warp market'                       # EDIT
+      - '[close]'
+
+  'mine':
+    material: IRON_PICKAXE
+    slot: 16
+    display_name: '&7&lMINE'
+    lore:
+      - '&7Public resource mine.'
+      - '&7Griefing is disabled here.'
+      - ''
+      - '&eClick to teleport'
+    left_click_commands:
+      - '[player] warp mine'                         # EDIT
+      - '[close]'
+
+  'farm':
+    material: WHEAT
+    slot: 21
+    display_name: '&6&lFARM'
+    lore:
+      - '&7Shared crop farm.'
+      - '&7Replant what you take!'
+      - ''
+      - '&eClick to teleport'
+    left_click_commands:
+      - '[player] warp farm'                         # EDIT
+      - '[close]'
+
+  'end':
+    material: ENDER_EYE
+    slot: 23
+    display_name: '&5&lTHE END'
+    lore:
+      - '&7The dragon awaits.'
+      - ''
+      - '&eClick to teleport'
+    left_click_commands:
+      - '[player] warp end'                          # EDIT
+      - '[close]'

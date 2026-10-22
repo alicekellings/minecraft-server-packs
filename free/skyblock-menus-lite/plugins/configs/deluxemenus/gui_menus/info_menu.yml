@@ -1,0 +1,46 @@
+# SkyBlock Menus Lite — Info Menu
+# Original configuration by IslandForge. Not derived from any plugin default.
+# DeluxeMenus 1.14.x  |  one menu per file
+# Lite edition: command list trimmed to the commands this pack actually registers.
+
+menu_title: '&8&lSERVER INFO'
+open_command: sbinfo
+register_command: true   # required — without this the command is never registered
+size: 27
+items:
+  filler:
+    material: BLACK_STAINED_GLASS
+    slots: [0,1,2,3,4,5,6,7,8,9,10,12,14,16,17,18,19,20,21,23,24,25,26]
+    display_name: ' '
+  how_it_works:
+    material: BOOK
+    slot: 11
+    display_name: '&f&lHOW SKYBLOCK WORKS'
+    lore:
+      - '&7Start on a tiny island.'
+      - '&7Expand it, level it up and'
+      - '&7unlock new biomes.'
+  commands:
+    material: WRITTEN_BOOK
+    slot: 13
+    display_name: '&f&lCOMMANDS'
+    lore:
+      - '&7/island &8- &7your island'
+      - '&7/sbmenu &8- &7this menu'
+      - '&7/sbisland &8- &7island controls'
+      - '&7/sbinfo &8- &7this page'
+  rules:
+    material: SHIELD
+    slot: 15
+    display_name: '&f&lRULES'
+    lore:
+      - '&7No griefing.'
+      - '&7No scamming.'
+      - '&7Be kind to new players.'
+  back:
+    material: ARROW
+    slot: 22
+    display_name: '&7&lBACK'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] main_menu'

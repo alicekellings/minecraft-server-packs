@@ -1,0 +1,66 @@
+# Starter Menus (Free Edition) — Help menu
+# Original configuration by the seller. Not derived from any default or shared config.
+# Open with: /helpmenu
+# Requires: DeluxeMenus 1.14.x+, PlaceholderAPI
+
+menu_title: '&8» &b&lHelp & Support'
+open_command: helpmenu                               # EDIT: /help is often taken — helpmenu avoids conflicts
+register_command: true
+size: 27
+update_interval: 10
+
+items:
+  'filler':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,23,24,25,26]
+    display_name: ' '
+
+  'discord':
+    material: PLAYER_HEAD
+    slot: 11
+    display_name: '&9&lDISCORD'
+    lore:
+      - '&7Chat with the community'
+      - '&7and get fast support.'
+      - ''
+      - '&eClick to copy the link'
+    left_click_commands:
+      - '[message] &9Discord: &ndiscord.gg/your-invite'    # EDIT: your invite link
+
+  'vote':
+    material: FIREWORK_ROCKET
+    slot: 13
+    display_name: '&6&lVOTE'
+    lore:
+      - '&7Voting takes 30 seconds and'
+      - '&7gives you rewards every day.'
+      - ''
+      - '&eClick for the vote links'
+    left_click_commands:
+      - '[message] &6Vote: &nhttps://your-vote-site.example/vote/yourserver'  # EDIT: your vote link
+
+  'store':
+    material: CHEST
+    slot: 15
+    display_name: '&a&lSTORE'
+    lore:
+      - '&7Ranks, cosmetics and kits.'
+      - ''
+      - '&7Every purchase supports'
+      - '&7the server. Thank you!'
+      - ''
+      - '&eClick for the store link'
+    left_click_commands:
+      - '[message] &aStore: &nhttps://your-store.example'   # EDIT: your store link
+
+  'rules':
+    material: PAPER
+    slot: 22
+    display_name: '&e&lRULES'
+    lore:
+      - '&71. Be respectful.'
+      - '&72. No griefing or stealing.'
+      - '&73. No cheats or exploits.'
+      - '&74. Have fun!'                             # EDIT: your rules
+    left_click_commands:
+      - '[message] &eFull rules: &nhttps://your-site.example/rules'  # EDIT: your rules page

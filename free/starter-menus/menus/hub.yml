@@ -1,0 +1,67 @@
+# Starter Menus (Free Edition) — Hub menu
+# Original configuration by the seller. Not derived from any default or shared config.
+# Open with: /hub
+# Requires: DeluxeMenus 1.14.x+, PlaceholderAPI
+
+menu_title: '&8» &a&lStarter Hub'                    # EDIT: window title
+open_command: hub                                    # EDIT: the command that opens this menu
+register_command: true
+size: 27                                             # EDIT: rows x 9
+update_interval: 10                                  # seconds between placeholder refresh
+
+items:
+  'filler':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+
+  'survival':                                        # EDIT: your main game mode
+    material: GRASS_BLOCK
+    slot: 10
+    display_name: '&a&lSURVIVAL'
+    lore:
+      - '&7Jump straight into the'
+      - '&7survival world.'
+      - ''
+      - '&7Players online: &e%server_online%'       # EDIT: requires eCloud Server expansion
+      - ''
+      - '&eClick to join'
+    left_click_commands:
+      - '[player] server survival'                   # EDIT: your join command (BungeeCord/CMI/etc.)
+      - '[close]'
+
+  'warps':
+    material: ENDER_PEARL
+    slot: 12
+    display_name: '&d&lWARPS'
+    lore:
+      - '&7Teleport around the server:'
+      - '&7spawn, market, mine and more.'
+      - ''
+      - '&eClick to browse'
+    left_click_commands:
+      - '[openguimenu] warps'                        # opens warps.yml — do not rename unless you also rename the file
+
+  'shop':
+    material: EMERALD
+    slot: 14
+    display_name: '&a&lSHOP'
+    lore:
+      - '&7Buy and sell items.'
+      - ''
+      - '&7Your balance: &e%vault_eco_balance_formatted%'   # EDIT: requires eCloud Vault expansion
+      - ''
+      - '&eClick to open'
+    left_click_commands:
+      - '[player] shop'                              # EDIT: your shop command (e.g. /shop from your shop plugin)
+
+  'help':
+    material: WRITABLE_BOOK
+    slot: 16
+    display_name: '&b&lHELP'
+    lore:
+      - '&7Links, rules and support.'
+      - ''
+      - '&eClick to open'
+    left_click_commands:
+      - '[openguimenu] help'                         # opens help.yml — menu NAME is the file name registered in config.yml (see INSTALL.md). Do not use the open_command here.

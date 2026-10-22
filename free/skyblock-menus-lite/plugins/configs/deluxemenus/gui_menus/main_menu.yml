@@ -1,0 +1,71 @@
+# SkyBlock Menus Lite — Main Menu
+# Original configuration by IslandForge. Not derived from any plugin default.
+# DeluxeMenus 1.14.x  |  one menu per file
+# Lite edition: 4 menus, no dependencies on menus outside this pack.
+
+menu_title: '&8&lSKYBLOCK &8| &7Menu'
+open_command:
+  - sbmenu
+  - skyblock
+register_command: true   # required — without this the command is never registered
+size: 27
+items:
+  filler:
+    material: BLACK_STAINED_GLASS
+    slots: [0,1,2,3,4,5,6,7,8,9,11,13,15,17,18,19,20,21,23,24,25,26]
+    display_name: ' '
+  island:
+    material: GRASS_BLOCK
+    slot: 10
+    display_name: '&a&lMY ISLAND'
+    lore:
+      - '&7Island level: &f%level_bskyblock_island_level%'
+      - '&7Total points: &f%level_bskyblock_island_total_points%'
+      - ''
+      - '&eClick to open'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] island_menu'
+  homes:
+    material: RED_BED
+    slot: 12
+    display_name: '&d&lISLAND HOMES'
+    lore:
+      - '&7Teleport to your island or'
+      - '&7to one of your saved homes.'
+      - ''
+      - '&eClick to open'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[player] island homes'
+  settings:
+    material: COMPARATOR
+    slot: 14
+    display_name: '&7&lSETTINGS'
+    lore:
+      - '&7Open the BentoBox island'
+      - '&7settings (flags, ranks, homes).'
+      - ''
+      - '&eClick to open'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[player] island settings'
+  info:
+    material: BOOK
+    slot: 16
+    display_name: '&f&lINFO'
+    lore:
+      - '&7How SkyBlock works,'
+      - '&7rules and commands.'
+      - ''
+      - '&eClick to read'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] info_menu'
+  close:
+    material: BARRIER
+    slot: 22
+    display_name: '&c&lCLOSE'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'

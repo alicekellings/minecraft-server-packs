@@ -1,0 +1,19 @@
+# DeluxeMenus — config.yml shipped with SkyBlock Menus Lite
+# Replace plugins/DeluxeMenus/config.yml with this file.
+# Lite ships 4 menus. The paid version ships 9 plus level curve,
+# permission sets and server tuning.
+
+check_updates: true
+debug: LOW
+use_admin_commands_in_menus_list: false
+menus_list_page_size: 10
+metas_list_page_size: 15
+gui_menus:
+  main_menu:
+    file: main_menu.yml
+  island_menu:
+    file: island_menu.yml
+  info_menu:
+    file: info_menu.yml
+  confirm_menu:
+    file: confirm_menu.yml

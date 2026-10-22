@@ -1,0 +1,22 @@
+SOURCE OFFER — SkyBlock Menus Lite
+=================================
+
+This package ships CONFIGURATION ONLY. It does not redistribute any plugin
+binary, so no source-code offer is required under the GPL/LGPL/EPL for this
+package.
+
+For your reference, the plugins this pack is built against are downloaded by you
+from their own upstream projects:
+
+  BentoBox          https://github.com/BentoBoxWorld/BentoBox
+  BSkyBlock         https://github.com/BentoBoxWorld/BSkyBlock
+  Level             https://github.com/BentoBoxWorld/Level
+  PlaceholderAPI    https://github.com/PlaceholderAPI/PlaceholderAPI
+  DeluxeMenus       https://github.com/HelpChat/DeluxeMenus
+
+The server core (Paper) is also downloaded by you:
+
+  Paper             https://github.com/PaperMC/Paper
+
+If you have any question about third-party components, use the support channel
+listed in README.md.
