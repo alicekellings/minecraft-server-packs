@@ -124,4 +124,6 @@ broken placeholders are the #1 cause of "menu shows but lore is raw text".
 
 ## Need help?
 
-Open a ticket on our support Discord. We answer within 24 hours.
+Post in the discussion thread on the page you downloaded this from, or open an
+issue at https://github.com/alicekellings/minecraft-server-packs/issues.
+We answer within 24 hours.

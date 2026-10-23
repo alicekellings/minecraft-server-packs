@@ -3,9 +3,8 @@
 Three ready-to-use menus for DeluxeMenus, built for survival, skyblock and
 lifesteal servers. Drop them in, change a few lines, done.
 
-**This is the free edition of [Starter Menus Pro].** It contains 3 menus.
-The Pro edition adds 4 more menus (shop, ranks, rewards, settings) plus
-bilingual English/Chinese text.
+More free packs for Paper 26.x servers:
+https://github.com/alicekellings/minecraft-server-packs
 
 ## What's inside
 
@@ -53,6 +52,8 @@ without changes. See `LICENSE-THIRD-PARTY.md` for the full text.
 
 ## Support
 
-Questions or issues? Open a ticket on our support Discord — we answer within
-24 hours. If something does not work on your server version, tell us the
-version and the error and we will fix it.
+Questions or issues? Post in the discussion thread on the page you downloaded
+this from, or open an issue at
+https://github.com/alicekellings/minecraft-server-packs/issues — we answer
+within 24 hours. If something does not work on your server version, tell us
+the version and the error and we will fix it.
