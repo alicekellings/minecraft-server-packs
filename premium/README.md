@@ -42,7 +42,7 @@ EssentialsX or the island plugin.
 
 Verified on Paper **26.2** (build 134) / Java **25** — all 9 menus load clean.
 
-**Status:** [Available on BuiltByBit](https://builtbybit.com/resources/skyblock-menus-island-level-configs.133190/)
+**Status:** in review — listing opens on BuiltByBit when review completes.
 
 ---
 

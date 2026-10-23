@@ -31,7 +31,7 @@ are paid products. This table is a catalog, not a download.
 
 | Pack | What it is | Status |
 |---|---|---|
-| **SkyBlock Setup** | Island levels, teams, protection, homes, sell shop, 9 hand-written GUIs, 5 permission groups, tuned `bukkit.yml` | [Available](https://builtbybit.com/resources/skyblock-menus-island-level-configs.133190/) |
+| **SkyBlock Setup** | Island levels, teams, protection, homes, sell shop, 9 hand-written GUIs, 5 permission groups, tuned `bukkit.yml` | In review — listing opens on BuiltByBit when review completes |
 | **OneBlock Setup** | AOneBlock phase progression, island levels, 5 hand-written GUIs | In review |
 | **Lifesteal SMP Setup** | Steal-heart PvP, revive beacons, heart withdrawal, 5 hand-written GUIs | In progress |
 | **Starter Menus Pro** | 4 more menus on top of the free set: shop, ranks, daily rewards, utilities | In progress |
