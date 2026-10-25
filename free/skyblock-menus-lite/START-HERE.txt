@@ -1,0 +1,42 @@
+================================================================
+  SkyBlock Menus Lite  v1.0.5
+================================================================
+
+  STEP 1   Double-click   install.bat
+           Linux / macOS:  bash install.sh
+
+           Downloads Paper and 5 plugins - about 69 MB.
+           If Java 25 is not installed, the installer fetches a
+           portable copy into  runtime\  as well, and start.bat
+           uses it automatically. Nothing else to install.
+
+           Leave the window alone until it prints INSTALL COMPLETE.
+
+  STEP 2   Double-click   start.bat
+           Linux / macOS:  bash start.sh
+
+           The first start is slow: it generates three worlds and
+           fetches some data from GitHub. On a slow connection expect
+           several minutes. Wait for the line that says   Done!
+
+  STEP 3   In that console window, type:
+
+               op YourMinecraftName
+
+           Join the server, then type:
+
+               /sbmenu
+
+  That is the entire install. There is nothing to copy, nothing to
+  move, no file to rename, and no Java to install by hand.
+
+  ----------------------------------------------------------------
+  Already running a server? Point the installer at it instead:
+
+      install.bat "D:\servers\my-server"
+
+  It adds the plugins and the menus to that folder, and copies
+  anything it replaces into plugins\.setup-backup-<time>\ first.
+
+  Full details and troubleshooting (optional reading): INSTALL.md
+================================================================

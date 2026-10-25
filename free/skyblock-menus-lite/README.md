@@ -2,8 +2,9 @@
 
 Four hand-built DeluxeMenus GUIs for a BentoBox SkyBlock server. Free edition.
 
-This is a **configuration pack**, not a plugin and not a pre-built world. You supply the
-plugin jars; this pack supplies the menus.
+Works two ways: drop it on a server you already run, or use it as a complete starter
+server — `install.bat` fetches Paper and the five plugins it needs, verifies every file
+against a pinned SHA-256, and puts each one in the right folder. See `START-HERE.txt`.
 
 Every file was written for this pack. No default configs were copied and resold.
 
@@ -13,20 +14,31 @@ Every file was written for this pack. No default configs were copied and resold.
 
 ```
 SkyBlockSetup-Lite-v1/
+├── START-HERE.txt               three steps, read this first
 ├── README.md                    this file
-├── INSTALL.md                   step-by-step install
+├── INSTALL.md                   full guide
+├── CHANGELOG.md                 version history
 ├── LICENSE-THIRD-PARTY.md       license text for every dependency
 ├── SOURCE-OFFER.txt             source links for the GPL-licensed dependencies
-└── plugins/configs/deluxemenus/
-    ├── config.yml               registers the 4 menus
-    └── gui_menus/
-        ├── main_menu.yml        hub: island, homes, settings, info, close
-        ├── island_menu.yml      go, island info, homes, spawn, reset, back
-        ├── info_menu.yml        how it works, commands, rules, back
-        └── confirm_menu.yml     reset guard: confirm / cancel
+├── install.bat / install.sh     downloads Paper + 5 plugins, checksum-verified
+├── installer/                   the download manifest and the Windows engine
+├── start.bat / start.sh         Aikar's JVM flags, EULA check, server.jar check
+├── server.properties            tuned for a small island server
+├── spigot.yml / bukkit.yml      per-world spawn limits cut for island worlds
+└── plugins/
+    └── DeluxeMenus/
+        ├── config.yml           registers the 4 menus
+        └── gui_menus/
+            ├── main_menu.yml    hub: island, homes, settings, info, close
+            ├── island_menu.yml  go, island info, homes, spawn, reset, back
+            ├── info_menu.yml    how it works, commands, rules, back
+            └── confirm_menu.yml reset guard: confirm / cancel
 ```
 
 Four menus, ten files, no loose ends. Nothing in Lite opens a menu that does not exist.
+
+The plugin configs are already in their real server folders. There is no copy map, no
+rename step, and no "put this here, that there" table to get wrong.
 
 ## Commands
 
@@ -41,23 +53,44 @@ so nobody can land on a reset confirmation by accident.
 
 ## Requirements
 
-- Paper 26.x — built and tested on **Paper 26.2**
-- **Java 25** — 26.2 and later require Java 25, not 21
-- BentoBox, BSkyBlock and Level
-- DeluxeMenus
-- PlaceholderAPI (the island level placeholders come from the BentoBox expansion)
+- **Java 25** — the only thing you install yourself
+  (https://adoptium.net/temurin/releases/?version=25, tick "Add to PATH")
+- Windows 10/11, or Linux / macOS with bash and curl
+- 2 GB RAM minimum; 4 GB comfortable
+- About 75 MB of download on first run
 
-Download links are on the resource page under Dependencies.
+Paper 26.2, BentoBox, BSkyBlock, Level, DeluxeMenus and PlaceholderAPI are all fetched
+by the installer at pinned versions. You do not pick any of them.
+
+## Quick start
+
+1. Double-click **`install.bat`** — or `bash install.sh`. Wait for `INSTALL COMPLETE`.
+   No Java install: if your machine has none, the installer fetches a portable
+   Java 25 into `runtime\` and `start.bat` uses it.
+2. Double-click **`start.bat`** — or `bash start.sh`. Accept the EULA on the first run,
+   type `YES` at the EULA prompt, wait for `Done!`.
+3. In the console: `op YourMinecraftName`.
+4. Join and run `/sbmenu`.
+
+**Already running a SkyBlock server?** Point the installer at it instead of using this
+folder as a new server:
+
+```
+install.bat "D:\servers\my-server"
+```
+
+It adds the menus and any plugin you are missing, and backs up anything it replaces.
 
 ## What the paid version adds
 
 Lite is the four menus you need to run an island. The full pack adds:
 
-- 6 more GUIs: levels, shop, team, leaderboard, settings, and a separate close/confirm set
+- 5 more GUIs: levels, shop, team, leaderboard, settings
 - Island level curve — a tuned cost and reward progression instead of the flat default
+- Economy: EssentialsX + Vault wired up, a sell shop, and a `worth.yml` that prices
+  modern block names instead of the dead pre-1.13 IDs
 - 5 LuckPerms groups, scoped to exactly the commands the menus use
-- Server tuning — `server.properties`, `bukkit.yml`, `spigot.yml` adjusted for island chunk loading
-- A full install guide with screenshots
+- Server tuning for an 80-player island server
 
 ## Support
 
@@ -69,5 +102,10 @@ I answer in English, usually within a day.
 The configuration files in this pack are my original work. You may use and edit them on
 your own servers. You may not resell or redistribute the pack itself, modified or not.
 
-This pack contains **no third-party jars**. Every dependency is downloaded by you directly
-from its author, so no third-party redistribution applies.
+This pack **redistributes no third-party jar**. The installer downloads each dependency
+from its author's own release page and verifies it against a pinned SHA-256, so every
+plugin stays under its own license.
+
+## Version
+
+**v1.0.5** — see `CHANGELOG.md`.

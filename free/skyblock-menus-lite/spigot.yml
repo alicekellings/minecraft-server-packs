@@ -1,0 +1,99 @@
+# ============================================================
+#  SkyBlock Setup — spigot.yml
+#  Tuned for an island server: many small worlds, few players
+#  per world, and a lot of entity churn from farming.
+#
+#  Changes from the Paper default are marked "tuned".
+# ============================================================
+
+settings:
+  save-user-cache-on-stop-only: false
+  bungeecord: false
+  sample-count: 12
+  player-shuffle: 0
+  user-cache-size: 1000
+  moved-wrongly-threshold: 0.0625
+  moved-too-quickly-multiplier: 10.0
+  timeout-time: 60
+  restart-on-crash: true
+  restart-script: ./start.sh
+  netty-threads: 4
+  attribute:
+    maxHealth:
+      max: 2048.0
+    movementSpeed:
+      max: 2048.0
+    attackDamage:
+      max: 2048.0
+  # tuned: with many worlds this line spams the console on villager farms
+  log-villager-deaths: false
+  log-named-deaths: true
+
+messages:
+  whitelist: You are not whitelisted on this server.
+  unknown-command: Unknown command. Type "/help" for help.
+  server-full: The server is full!
+  outdated-client: Outdated client! Please use 26.x
+  outdated-server: Outdated server! Please use 26.x
+  restart: Server is restarting
+
+advancements:
+  disable-saving: false
+  disabled:
+    - minecraft:story/disabled
+
+world-settings:
+  default:
+    below-zero-generation-in-existing-chunks: true
+    # Island worlds are small; keeping this low is the biggest TPS win.
+    view-distance: 6
+    simulation-distance: 4
+    thunder-chance: 100000
+    # tuned: merge drops sooner so farms leave fewer item entities behind
+    merge-radius:
+      item: 4.5
+      exp: 6.0
+    # tuned: clear dropped loot sooner
+    item-despawn-rate: 3000
+    mob-spawn-range: 4
+    # tuned: arrows and tridents do not need to linger
+    arrow-despawn-rate: 100
+    trident-despawn-rate: 600
+    # tuned: spawner mobs are the classic SkyBlock lag source
+    nerf-spawner-mobs: true
+    entity-activation-range:
+      # tuned: mobs outside a small radius do not need full AI
+      animals: 12
+      monsters: 16
+      raiders: 24
+      misc: 6
+      water: 6
+      villagers: 12
+      flying-monsters: 24
+      wake-up-inactive:
+        animals-max-per-tick: 4
+        animals-every: 1200
+        animals-for: 100
+        monsters-max-per-tick: 8
+        monsters-every: 400
+        monsters-for: 100
+        villagers-max-per-tick: 4
+        villagers-every: 600
+        villagers-for: 100
+        flying-monsters-max-per-tick: 8
+        flying-monsters-every: 200
+        flying-monsters-for: 100
+    ticks-per:
+      # tuned: hoppers are the other classic lag source
+      hopper-transfer: 16
+      hopper-check: 16
+    hopper-amount: 1
+    hopper-can-load-chunks: false
+    # tuned: cap TNT so one player cannot stall the whole server
+    max-tnt-per-tick: 30
+    enable-zombie-pigmen-portal-spawns: false
+    wither-spawn-sound-radius: 0
+    hanging-tick-frequency: 100
+    zombie-aggressive-towards-villager: true
+    ender-dragons-death-always-places-dragon-egg: false
+    verbose: false

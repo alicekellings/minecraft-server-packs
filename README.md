@@ -3,9 +3,13 @@
 Hand-written configuration packs for **Paper 26.x** servers — SkyBlock, OneBlock,
 Lifesteal, and DeluxeMenus GUI sets.
 
-These are **config packs, not plugin bundles**. You download the plugins yourself (which
-keeps you on the newest security builds and keeps licensing clean); these packs supply the
-configuration that makes them feel finished instead of default.
+These are **config packs, not plugin bundles** — but you do not go hunting for jars either.
+Every pack ships a one-file installer that downloads Paper and the exact plugin versions from
+each project's own release page, verifies every file against a pinned SHA-256, and puts it in
+the right folder. If the machine has no Java 25, the installer fetches a portable copy too.
+
+The packs supply the configuration that makes a default server feel finished — menus, level
+curves, permissions, tuning — and the installer removes the manual setup that usually breaks.
 
 Every file in every pack was written for that pack. Nothing here is a repackaged plugin
 default or a resold copy of someone else's config.
@@ -16,11 +20,13 @@ default or a resold copy of someone else's config.
 
 | Pack | What it is |
 |---|---|
-| **[SkyBlock Menus Lite](free/skyblock-menus-lite/)** | 4 DeluxeMenus GUIs for a BentoBox SkyBlock server. Hub, island, info, and a reset-confirm guard. |
+| **[SkyBlock Menus Lite](free/skyblock-menus-lite/)** | 4 DeluxeMenus GUIs for a BentoBox SkyBlock server, plus a one-click installer. Hub, island, info, and a reset-confirm guard. |
 | **[Starter Menus](free/starter-menus/)** | Hub / Help / Warps menus that work on survival, skyblock or lifesteal. Three files, ten-minute install. |
 
 Both are complete and usable as-is. Not demos, not crippled trials — the same files we
-run on test servers. Copy them into `plugins/DeluxeMenus/gui_menus/` and go.
+run on test servers. SkyBlock Menus Lite: unzip, double-click `install.bat`, double-click
+`start.bat`, type `YES` once for the EULA. Starter Menus is three files you drop into
+`plugins/DeluxeMenus/gui_menus/`.
 
 ---
 
@@ -59,13 +65,16 @@ Write-ups on problems that bit us, usually with a config snippet that fixes them
 
 Everything in this repo targets **Paper 26.x on Java 25**.
 
-The free packs need only free plugins:
+For the free SkyBlock Menus Lite pack none of that is manual: the installer fetches Paper,
+Java 25 (only if your machine has none), and these plugins, then checks each download:
 
 - **DeluxeMenus** (MIT) — the menu engine
 - **PlaceholderAPI** (GPL) — for live values in lore
 - **BentoBox + BSkyBlock** (free) — SkyBlock Menus Lite only
 
 Exact versions we build against are listed in each pack's `LICENSE-THIRD-PARTY.md`.
+
+Starter Menus is menu files only and uses the DeluxeMenus you already run.
 
 ---
 

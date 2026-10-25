@@ -1,5 +1,6 @@
 # DeluxeMenus — config.yml shipped with SkyBlock Menus Lite
-# Replace plugins/DeluxeMenus/config.yml with this file.
+# install.bat already put this file here, and the menus in gui_menus/ next to it.
+# There is nothing to copy, move or merge.
 # Lite ships 4 menus. The paid version ships 9 plus level curve,
 # permission sets and server tuning.
 

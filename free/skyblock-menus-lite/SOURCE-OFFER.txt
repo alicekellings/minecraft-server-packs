@@ -5,8 +5,8 @@ This package ships CONFIGURATION ONLY. It does not redistribute any plugin
 binary, so no source-code offer is required under the GPL/LGPL/EPL for this
 package.
 
-For your reference, the plugins this pack is built against are downloaded by you
-from their own upstream projects:
+For your reference, the plugins this pack is built against are fetched on your
+machine by install.bat / install.sh, straight from their own upstream projects:
 
   BentoBox          https://github.com/BentoBoxWorld/BentoBox
   BSkyBlock         https://github.com/BentoBoxWorld/BSkyBlock
