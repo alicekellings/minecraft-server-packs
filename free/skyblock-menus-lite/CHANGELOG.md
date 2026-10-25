@@ -3,6 +3,10 @@
 All notable changes to this pack are documented here.
 Versions follow `MAJOR.MINOR.PATCH`.
 
+## v1.0.6 — 2026-10-25
+
+README file-count claim corrected
+
 ## v1.0.5 — 2026-10-25
 
 ### Changed

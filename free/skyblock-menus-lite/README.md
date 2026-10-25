@@ -35,7 +35,7 @@ SkyBlockSetup-Lite-v1/
             └── confirm_menu.yml reset guard: confirm / cancel
 ```
 
-Four menus, ten files, no loose ends. Nothing in Lite opens a menu that does not exist.
+Four menus, one installer, no loose ends. Nothing in Lite opens a menu that does not exist.
 
 The plugin configs are already in their real server folders. There is no copy map, no
 rename step, and no "put this here, that there" table to get wrong.
@@ -108,4 +108,4 @@ plugin stays under its own license.
 
 ## Version
 
-**v1.0.5** — see `CHANGELOG.md`.
+**v1.0.6** — see `CHANGELOG.md`.
