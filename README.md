@@ -35,11 +35,12 @@ run on test servers. SkyBlock Menus Lite: unzip, double-click `install.bat`, dou
 Full server setups and larger menu sets. **Source is not published in this repo** — these
 are paid products. This table is a catalog, not a download.
 
-| Pack | What it is | Status |
+| Pack | What it is | Where to buy |
 |---|---|---|
-| **SkyBlock Setup** | Island levels, teams, protection, homes, sell shop, 9 hand-written GUIs, 5 permission groups, tuned `bukkit.yml` | In review — listing opens on BuiltByBit when review completes |
-| **OneBlock Setup** | AOneBlock phase progression, island levels, 5 hand-written GUIs | In review |
-| **Lifesteal SMP Setup** | Steal-heart PvP, revive beacons, heart withdrawal, 5 hand-written GUIs | In progress |
+| **Survival Setup** | 6 menus, 4 kits, GriefPrevention claims, economy, homes, CoreProtect rollback | [itch.io — $19.99](https://asphero.itch.io/survival-setup-minecraft) |
+| **SkyBlock Setup** | Island levels, teams, protection, homes, sell shop, 9 hand-written GUIs, 5 permission groups, tuned `bukkit.yml` | [itch.io — $12.99](https://asphero.itch.io/skyblock-setup-minecraft) |
+| **OneBlock Setup** | AOneBlock phase progression, island levels, 5 hand-written GUIs | [itch.io — $19.99](https://asphero.itch.io/oneblock-setup-minecraft) |
+| **Lifesteal SMP Setup** | Steal-heart PvP, revive beacons, heart withdrawal, 5 hand-written GUIs | [itch.io — $19.99](https://asphero.itch.io/lifesteal-smp-setup-minecraft) |
 | **Starter Menus Pro** | 4 more menus on top of the free set: shop, ranks, daily rewards, utilities | In progress |
 | **Economy Menus Pack** | Store front with live balance, quick-sell panel, economy dashboard | In progress |
 | **Leaderboards & Stats Pack** | Personal stats, server stats, live island top-10 | In progress |
