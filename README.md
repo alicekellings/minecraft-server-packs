@@ -1,54 +1,86 @@
-# Minecraft Server Config Packs
+# Minecraft server setups that install themselves
+
+![Survival Setup — main menu](docs/images/cover.jpg)
 
 Hand-written configuration packs for **Paper 26.x** servers — SkyBlock, OneBlock,
-Lifesteal, and DeluxeMenus GUI sets.
+Lifesteal and Survival. Every pack ships a one-file installer that downloads Paper and
+the exact plugin versions from each project's own release page, verifies every file
+against a pinned SHA-256, and puts it in the right folder. If the machine has no
+Java 25, the installer fetches a portable copy too.
 
-These are **config packs, not plugin bundles** — but you do not go hunting for jars either.
-Every pack ships a one-file installer that downloads Paper and the exact plugin versions from
-each project's own release page, verifies every file against a pinned SHA-256, and puts it in
-the right folder. If the machine has no Java 25, the installer fetches a portable copy too.
-
-The packs supply the configuration that makes a default server feel finished — menus, level
-curves, permissions, tuning — and the installer removes the manual setup that usually breaks.
-
-Every file in every pack was written for that pack. Nothing here is a repackaged plugin
-default or a resold copy of someone else's config.
+No jar hunting. No "copy this file to plugins/…" table. No Java install by hand.
 
 ---
 
-## Free packs — full source, no strings
+## Free — full source, no strings
 
-| Pack | What it is |
-|---|---|
-| **[SkyBlock Menus Lite](free/skyblock-menus-lite/)** | 4 DeluxeMenus GUIs for a BentoBox SkyBlock server, plus a one-click installer. Hub, island, info, and a reset-confirm guard. |
-| **[Starter Menus](free/starter-menus/)** | Hub / Help / Warps menus that work on survival, skyblock or lifesteal. Three files, ten-minute install. |
+### SkyBlock Menus Lite
 
-Both are complete and usable as-is. Not demos, not crippled trials — the same files we
-run on test servers. SkyBlock Menus Lite: unzip, double-click `install.bat`, double-click
-`start.bat`, type `YES` once for the EULA. Starter Menus is three files you drop into
-`plugins/DeluxeMenus/gui_menus/`.
+![SkyBlock Menus Lite](docs/images/lite.jpg)
+
+Four DeluxeMenus GUIs for a BentoBox SkyBlock server, plus the same one-click
+installer. Hub, island, info, and a reset-confirm guard.
+
+Unzip → double-click `install.bat` → double-click `start.bat` → type `YES` once for
+the EULA. That is the whole install.
+
+**[Download the free pack](free/skyblock-menus-lite/)** · **[Starter Menus](free/starter-menus/)**
 
 ---
 
-## Premium packs
+## Premium setups
 
-Full server setups and larger menu sets. **Source is not published in this repo** — these
-are paid products. This table is a catalog, not a download.
+### Survival Setup — $19.99
 
-| Pack | What it is | Where to buy |
-|---|---|---|
-| **Survival Setup** | 6 menus, 4 kits, GriefPrevention claims, economy, homes, CoreProtect rollback | [itch.io — $19.99](https://asphero.itch.io/survival-setup-minecraft) |
-| **SkyBlock Setup** | Island levels, teams, protection, homes, sell shop, 9 hand-written GUIs, 5 permission groups, tuned `bukkit.yml` | [itch.io — $12.99](https://asphero.itch.io/skyblock-setup-minecraft) |
-| **OneBlock Setup** | AOneBlock phase progression, island levels, 5 hand-written GUIs | [itch.io — $19.99](https://asphero.itch.io/oneblock-setup-minecraft) |
-| **Lifesteal SMP Setup** | Steal-heart PvP, revive beacons, heart withdrawal, 5 hand-written GUIs | [itch.io — $19.99](https://asphero.itch.io/lifesteal-smp-setup-minecraft) |
-| **Starter Menus Pro** | 4 more menus on top of the free set: shop, ranks, daily rewards, utilities | In progress |
-| **Economy Menus Pack** | Store front with live balance, quick-sell panel, economy dashboard | In progress |
-| **Leaderboards & Stats Pack** | Personal stats, server stats, live island top-10 | In progress |
+![Survival Setup](docs/images/survival.jpg)
 
-See **[premium/](premium/)** for what each one contains in detail.
+6 menus, 4 kits, GriefPrevention claims, EssentialsX economy, homes, CoreProtect
+rollback, LuckPerms groups.
 
-The menu packs are bilingual — every line of text is written English | 中文 side by side,
-so one purchase serves both your English and Chinese players.
+**[Buy on itch.io](https://asphero.itch.io/survival-setup-minecraft)**
+
+### SkyBlock Setup — $12.99
+
+![SkyBlock Setup](docs/images/skyblock.jpg)
+
+Island levels, teams, protection, homes, sell shop, 9 hand-written GUIs, 5 permission
+groups and tuned `bukkit.yml`.
+
+**[Buy on itch.io](https://asphero.itch.io/skyblock-setup-minecraft)**
+
+### OneBlock Setup — $19.99
+
+![OneBlock Setup](docs/images/oneblock.jpg)
+
+AOneBlock phase progression, island levels and 5 hand-written GUIs.
+
+**[Buy on itch.io](https://asphero.itch.io/oneblock-setup-minecraft)**
+
+### Lifesteal SMP Setup — $19.99
+
+![Lifesteal SMP Setup](docs/images/lifesteal.jpg)
+
+Steal-heart PvP, revive beacons, heart withdrawal and 5 hand-written GUIs.
+
+**[Buy on itch.io](https://asphero.itch.io/lifesteal-smp-setup-minecraft)**
+
+Every paid pack includes the installer, the full server layout and the same
+double-click setup as the free pack. The menu packs are written English | 中文 side by
+side, so one purchase serves both your English and Chinese players.
+
+---
+
+## How the installer works
+
+1. `install.bat` (or `run install.sh` on Linux / macOS) reads `installer/plugins.list`.
+2. It downloads Paper and each plugin from that project's own release page.
+3. Every download is checked against a pinned SHA-256. A truncated or swapped file is
+   deleted and retried, never used.
+4. Files land in their real server folders. Running it again is safe — files that
+   already verify are skipped.
+5. `start.bat` uses Aikar's flags, asks for the EULA once (`YES`), and starts the
+   server. No Java on the machine? The installer already put a portable Temurin 25 in
+   `runtime\`.
 
 ---
 
@@ -64,28 +96,19 @@ Write-ups on problems that bit us, usually with a config snippet that fixes them
 
 ## Requirements
 
-Everything in this repo targets **Paper 26.x on Java 25**.
+Everything here targets **Paper 26.x on Java 25**. Windows 10/11, or Linux / macOS
+with bash and curl. 2 GB RAM minimum; 4 GB comfortable.
 
-For the free SkyBlock Menus Lite pack none of that is manual: the installer fetches Paper,
-Java 25 (only if your machine has none), and these plugins, then checks each download:
-
-- **DeluxeMenus** (MIT) — the menu engine
-- **PlaceholderAPI** (GPL) — for live values in lore
-- **BentoBox + BSkyBlock** (free) — SkyBlock Menus Lite only
-
-Exact versions we build against are listed in each pack's `LICENSE-THIRD-PARTY.md`.
-
-Starter Menus is menu files only and uses the DeluxeMenus you already run.
+Third-party plugins remain under their own licenses; nothing here redistributes them.
+Each pack's `LICENSE-THIRD-PARTY.md` lists the exact versions it builds against.
 
 ---
 
 ## License
 
-**Free packs** — use them on any server you run, edit them however you like, and share the
-link with anyone. You may not sell them, bundle them into a paid product, or redistribute
-them as your own work. Full text in [LICENSE](LICENSE).
+**Free packs** — use them on any server you run, edit them however you like, and share
+the link. You may not sell them, bundle them into a paid product, or redistribute them
+as your own work. Full text in [LICENSE](LICENSE).
 
 **Premium packs** — commercial license is granted with purchase. Not covered by the
 license above.
-
-Third-party plugins remain under their own licenses; nothing here redistributes them.

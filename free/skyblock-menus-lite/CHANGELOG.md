@@ -3,6 +3,19 @@
 All notable changes to this pack are documented here.
 Versions follow `MAJOR.MINOR.PATCH`.
 
+## v1.0.7 — 2026-10-28
+
+Support section corrected
+
+- The README told buyers to send a direct message on BuiltByBit. That is wrong for
+  copies downloaded from Spigot or Voxel, and it named a different marketplace inside
+  the pack. It now points to the discussion tab of the page you downloaded from and
+  to the GitHub issue tracker.
+- Removed the "what the paid version adds" block from the shipped README. Marketplace
+  rules treat promotion inside the resource itself as an advertisement; the full
+  setups are described on the resource page instead. No menu, config or installer
+  behaviour changed.
+
 ## v1.0.6 — 2026-10-25
 
 README file-count claim corrected

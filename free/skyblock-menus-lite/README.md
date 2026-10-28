@@ -81,20 +81,10 @@ install.bat "D:\servers\my-server"
 
 It adds the menus and any plugin you are missing, and backs up anything it replaces.
 
-## What the paid version adds
-
-Lite is the four menus you need to run an island. The full pack adds:
-
-- 5 more GUIs: levels, shop, team, leaderboard, settings
-- Island level curve — a tuned cost and reward progression instead of the flat default
-- Economy: EssentialsX + Vault wired up, a sell shop, and a `worth.yml` that prices
-  modern block names instead of the dead pre-1.13 IDs
-- 5 LuckPerms groups, scoped to exactly the commands the menus use
-- Server tuning for an 80-player island server
-
 ## Support
 
-Post in the discussion tab or send a direct message here on BuiltByBit.
+Post in the discussion tab on the page where you downloaded this pack, or open an
+issue at https://github.com/alicekellings/minecraft-server-packs/issues
 I answer in English, usually within a day.
 
 ## Licensing
@@ -108,4 +98,4 @@ plugin stays under its own license.
 
 ## Version
 
-**v1.0.6** — see `CHANGELOG.md`.
+**v1.0.7** — see `CHANGELOG.md`.
